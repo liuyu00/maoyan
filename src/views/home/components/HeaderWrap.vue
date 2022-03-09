@@ -4,7 +4,7 @@
       <a href="javascript:;">中某县</a>
       <search-bar :placeholder="hotSearchWord" to="/search" />
     </header>
-    <div></div>
+    <tab-bar :tabs="tabs" />
   </div>
 </template>
 
@@ -17,6 +17,26 @@ export default {
         '这个杀手不太灵',
         '无名之辈',
         '你好事件'
+      ],
+      tabs: [
+        {
+          text: '推荐'
+        },
+        {
+          text: '热点解读'
+        },
+        {
+          text: '预告片'
+        },
+        {
+          text: '说电影'
+        },
+        {
+          text: '佳片'
+        },
+        {
+          text: '剧综'
+        }
       ]
     }
   }
