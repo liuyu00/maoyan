@@ -4,6 +4,10 @@
       <a
         v-for="(item, index) in tabs"
         :key="index"
+        :class="{
+          active: activeIndex === index
+        }"
+        @click="change(index)"
         href="javascript:;"
       >{{item.text}}</a>
     </nav>
@@ -15,6 +19,16 @@ export default {
   name: 'tab-bar',
   props: {
     tabs: Array
+  },
+  data () {
+    return {
+      activeIndex: 0
+    }
+  },
+  methods: {
+    change (index) {
+      this.activeIndex = index
+    }
   }
 }
 </script>
@@ -30,6 +44,9 @@ export default {
       font-size: 14px;
       text-decoration: none;
       color: #333;
+      &.active {
+        font-size: 18px;
+      }
     }
   }
 }
