@@ -31,3 +31,16 @@ git clone 地址  克隆一个远程仓库的代码
 
 git@github.com:liuyu00/maoyan.git
 
+git pull origin 分子名称  从远程仓库更新更改
+
+分支管理
+git branch [branchName]  创建一个新分支
+git checkout [branchName]  切换分支
+git checkout -b [branchName]  创建并且切换分支
+
+分支管理策略
+master 主分支
+dev 开发分支
+liuyu 开发工程师刘宇的分支
+
+
