@@ -31,6 +31,7 @@ git clone 地址  克隆一个远程仓库的代码
 
 git@github.com:liuyu00/maoyan.git
 
+<<<<<<< HEAD
 
 # git 指令
 
@@ -72,3 +73,18 @@ git rm -f a.a 强行移除修改后文件(从暂存区和工作区中删除)
 git diff --cached 或 $ git diff --staged 查看尚未提交的更新
 git stash push 将文件给push到一个临时空间中
 git stash pop 将文件从临时空间pop下来
+=======
+git pull origin 分子名称  从远程仓库更新更改
+
+分支管理
+git branch [branchName]  创建一个新分支
+git checkout [branchName]  切换分支
+git checkout -b [branchName]  创建并且切换分支
+
+分支管理策略
+master 主分支
+dev 开发分支
+liuyu 开发工程师刘宇的分支
+
+
+>>>>>>> 02d4d4ef578d7098a585a380d9ffc47a66f93fab
