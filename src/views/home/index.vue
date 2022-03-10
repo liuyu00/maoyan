@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderWrap />
-    首页
+    塞卡就是登记卡
   </div>
 </template>
 

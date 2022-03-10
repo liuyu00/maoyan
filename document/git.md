@@ -20,3 +20,4 @@ git log 查看提交日志
 git log --pretty=oneline  以一行展示的方式查看提交日志
 git reflog 参看所有操作记录
 
+git checkout -- readme.txt 
