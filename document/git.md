@@ -21,3 +21,13 @@ git log --pretty=oneline  以一行展示的方式查看提交日志
 git reflog 参看所有操作记录
 
 git checkout -- readme.txt 
+
+git remote -v 参看远程仓库
+git remote add origin ssh地址 添加远程仓库
+
+git push origin master 将本地提交，发送到远程仓库 master分子
+
+git clone 地址  克隆一个远程仓库的代码
+
+git@github.com:liuyu00/maoyan.git
+
