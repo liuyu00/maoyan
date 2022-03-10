@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 aaaaaaaaa
+=======
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+>>>>>>> aaaa
