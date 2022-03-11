@@ -4,7 +4,7 @@
       <a href="javascript:;">中某县</a>
       <search-bar :placeholder="hotSearchWord" to="/search" />
     </header>
-    <tab-bar :tabs="tabs" />
+    <tab-bar :tabs="tabs" router />
   </div>
 </template>
 
@@ -20,22 +20,28 @@ export default {
       ],
       tabs: [
         {
-          text: '推荐'
+          text: '推荐',
+          key: '/home/recommend'
         },
         {
-          text: '热点解读'
+          text: '热点解读',
+          key: '/home/hotspot'
         },
         {
-          text: '预告片'
+          text: '预告片',
+          key: '/home/notice'
         },
         {
-          text: '说电影'
+          text: '说电影',
+          key: '/home/move'
         },
         {
-          text: '佳片'
+          text: '佳片',
+          key: '/home/good'
         },
         {
-          text: '剧综'
+          text: '剧综',
+          key: '/home/variety'
         }
       ]
     }

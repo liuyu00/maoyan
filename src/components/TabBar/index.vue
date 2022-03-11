@@ -7,10 +7,12 @@
         :class="{
           active: activeIndex === index
         }"
-        @click="change(index)"
+        @click="change(item, index)"
         href="javascript:;"
+        ref="navs"
       >{{item.text}}</a>
     </nav>
+    <span class="line" ref="line"></span>
   </div>
 </template>
 
@@ -18,16 +20,32 @@
 export default {
   name: 'tab-bar',
   props: {
-    tabs: Array
+    tabs: Array,
+    router: Boolean
   },
   data () {
     return {
       activeIndex: 0
     }
   },
+  mounted () {
+    this.setLineLeft()
+  },
   methods: {
-    change (index) {
+    change (item, index) {
+      if (this.router && this.$route.fullPath !== item.key) {
+        this.$router.push(item.key)
+      }
       this.activeIndex = index
+      this.$nextTick(() => {
+        this.setLineLeft()
+      })
+    },
+    setLineLeft () {
+      const activeNav = this.$refs.navs[this.activeIndex]
+      const windth = activeNav.clientWidth
+      const left = activeNav.offsetLeft + windth / 2 - 5
+      this.$refs.line.style.left = left + 'px'
     }
   }
 }
@@ -36,18 +54,30 @@ export default {
 <style lang="scss" scoped>
 .tabs {
   width: 100%;
+  overflow: auto;
+  position: relative;
   nav {
     display: flex;
     a {
       padding: 0 10px;
       line-height: 40px;
       font-size: 14px;
+      // margin-right: 10px;
       text-decoration: none;
       color: #333;
+      flex-shrink: 0;
       &.active {
         font-size: 18px;
       }
     }
+  }
+  .line {
+    position: absolute;
+    bottom: 5px;
+    width: 10px;
+    height: 2px;
+    background: #f03d37;
+    transition: all .5s ease;
   }
 }
 </style>

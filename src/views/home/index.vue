@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="home-page">
     <HeaderWrap />
-    塞卡就是登记卡
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -16,5 +18,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.home-page {
+  .content {
+    background: #f2f2f2;
+    width: 100vw;
+    min-height: calc(100vh - 140px);
+  }
+}
 </style>
